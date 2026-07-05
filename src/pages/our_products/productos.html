@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Productos | Elite Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#bec6e0",
+                    "tertiary-container": "#2a1700",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-variant": "#d3e4fe",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline": "#76777d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#131b2e",
+                    "surface-dim": "#cbdbf5",
+                    "outline-variant": "#c6c6cd",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-primary-container": "#7c839b",
+                    "inverse-surface": "#213145",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary-fixed": "#002113",
+                    "surface-container": "#e5eeff",
+                    "on-tertiary-container": "#b87500",
+                    "surface-tint": "#565e74",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary": "#006c49",
+                    "primary": "#000000",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dce9ff",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "tertiary": "#000000",
+                    "on-secondary-container": "#00714d",
+                    "surface-container-low": "#eff4ff",
+                    "on-secondary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed": "#ffddb8",
+                    "secondary-container": "#6cf8bb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "margin-tablet": "32px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "sm": "8px",
+                    "xl": "32px",
+                    "unit": "4px"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="sticky top-0 bg-surface dark:bg-surface shadow-sm dark:shadow-none z-50 w-full">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-4 min-w-0">
+<a href="../../../index.html" class="p-2 text-primary dark:text-inverse-primary hover:bg-surface-container-low transition-colors rounded-full active:scale-95 duration-150 shrink-0" title="Volver al inicio">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<h1 class="text-base sm:text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface truncate">Elite Aesthetics</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-primary dark:text-inverse-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95 duration-150">search</button>
+<button class="material-symbols-outlined text-primary dark:text-inverse-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95 duration-150">notifications</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 md:px-8 py-6">
+<!-- Hero Section with Animation -->
+<section class="relative h-48 md:h-64 rounded-xl overflow-hidden mb-8 flex items-center px-8">
+
+<div class="relative z-10 max-w-xl">
+<h2 class="text-2xl sm:text-display-lg font-display-lg text-primary mb-2">Cuidado Capilar de Lujo</h2>
+<p class="text-body-md sm:text-body-lg font-body-lg text-on-surface-variant">Productos profesionales y tratamientos selectos para el cuidado óptimo de tu cabello.</p>
+</div>
+</section>
+<!-- Search and Filter Bar -->
+<div class="flex flex-col md:flex-row gap-4 mb-8 sticky top-20 z-40 bg-background/80 backdrop-blur-md py-2">
+<div class="relative flex-grow group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all text-body-md font-body-md" placeholder="Buscar por nombre de producto o categoría..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar items-center">
+<button class="px-5 py-2 bg-primary text-on-primary rounded-full text-label-lg font-label-lg flex items-center gap-2 whitespace-nowrap active:scale-95 transition-transform">
+                    Todos
+                </button>
+<button class="px-5 py-2 bg-surface border border-outline-variant text-on-surface-variant hover:bg-surface-container-low rounded-full text-label-lg font-label-lg whitespace-nowrap active:scale-95 transition-transform">
+                    Cuidado Capilar
+                </button>
+<button class="px-5 py-2 bg-surface border border-outline-variant text-on-surface-variant hover:bg-surface-container-low rounded-full text-label-lg font-label-lg whitespace-nowrap active:scale-95 transition-transform">
+                    Óleos & Aceites
+                </button>
+<button class="px-5 py-2 bg-surface border border-outline-variant text-on-surface-variant hover:bg-surface-container-low rounded-full text-label-lg font-label-lg whitespace-nowrap active:scale-95 transition-transform">
+                    Mascarillas
+                </button>
+<button class="material-symbols-outlined p-2 bg-surface border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors">tune</button>
+</div>
+</div>
+<!-- Product Grid (Bento Style) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full border border-outline-variant/30">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A premium, sleek glass bottle of artisanal hair oil positioned on a minimalist white marble surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8xDI_JZ3k0zVzqUTy3wMqWA3pz6_d994oSnrF4l9-okLFXzEGVa4Isqbj_97UMFn29LwGQUtkjRQ4tFlS8-EbPEZKmDkVkGKjA5Aoz1xbY7teeH70Pgruy8nj2w-UZNb4sExA0gcoVbwVh9G9yr71UKt7G2wLMpOfDa-cv0xKxErR0m_ovKQn8BSJzXTYs3b9HvkSdyKP5kCE97tr_14CkJRfxyybhFgCXjdmFArjh3Ntd_YYaC3YYaaMZ5eW0EW45fVp-1674Zve"/>
+<div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">Disponible</div>
+<button class="absolute top-3 right-3 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity active:scale-90">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant bg-secondary-fixed/20 px-2 py-0.5 rounded">Aceites</span>
+<span class="text-headline-md font-headline-md text-primary">$42.00</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 line-clamp-1">Elixir Revitalizante</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Mezcla de aceites orgánicos de alta potencia para el brillo y restauración folicular profesional.</p>
+<div class="mt-auto flex gap-2">
+<button class="flex-grow bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:bg-primary/90 transition-colors active:scale-95">Me Interesa</button>
+<button class="material-symbols-outlined w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-primary hover:bg-surface-container-low active:scale-95 transition-all">visibility</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full border border-outline-variant/30">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end professional hair mask in a matte black jar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLDl-qwVXNUaAQ9i97zbHMjOWxz_B61in2SgVcAETwYAiJEeSjWzVfZCapxwA2gHiTztr1Wolq5NVJ0_qhddJClZePTRw6XTJXEkhyGfHF15ZFOFVX8vuShuLCm7sUFDWk4ymv3-KVQVnSSHLCl4kDHAmdDFyv92O9XMX5Eeupmd9JYt0ViIAk_ZdDAmCukAp-xmNqVOKnNCeelZXuvI3EDCkbAIimp-ws_8gyl-t6TIzCu9Og0IIz6z6OM9qM4duliCAehWiM9-Rb"/>
+<div class="absolute top-3 left-3 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-label-sm font-label-sm">Más Vendido</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-sm font-label-sm text-on-primary-fixed-variant bg-primary-fixed/30 px-2 py-0.5 rounded">Mascarillas</span>
+<span class="text-headline-md font-headline-md text-primary">$58.00</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 line-clamp-1">Complejo Reparador Profundo</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Mascarilla de reparación intensiva con infusión de queratina para la restauración estructural capilar.</p>
+<div class="mt-auto flex gap-2">
+<button class="flex-grow bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:bg-primary/90 transition-colors active:scale-95">Me Interesa</button>
+<button class="material-symbols-outlined w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-primary hover:bg-surface-container-low active:scale-95 transition-all">visibility</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full border border-outline-variant/30">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A transparent, futuristic spray bottle containing a crystalline hair mist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA96D7x1ao54p-S9XEY61DEnMqexUl31-3-Nnw3ugjX0u2jFP4psp04i9G7KxQMiF8bI8JkyzajZ_gh8RCQsQh-cDgaAjtpVX_BUWSlDUDzINgda7aD3Qd7TKhlkFd5YHWyH9sE-IRpTyBX6ZNcoC7Dojhul5DsdpC_TuUvK4WIsy74TaJDhGhtSA4_qa2Ln07mROEX5bZtUWEEXmbyO4vpT-m3z7P-NUKKfFh-6rLyATYUc8T3sYfH7lWghiqa1Ap--zcsmRhW6gt5"/>
+<div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">Disponible</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant bg-secondary-fixed/20 px-2 py-0.5 rounded">Cuidado Capilar</span>
+<span class="text-headline-md font-headline-md text-primary">$35.00</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 line-clamp-1">Bruma Voluminizadora Prisma</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Spray termoactivo ligero que aporta volumen y brillo de alta definición.</p>
+<div class="mt-auto flex gap-2">
+<button class="flex-grow bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:bg-primary/90 transition-colors active:scale-95">Me Interesa</button>
+<button class="material-symbols-outlined w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-primary hover:bg-surface-container-low active:scale-95 transition-all">visibility</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full border border-outline-variant/30">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A collection of small, minimalist amber glass vials containing concentrated essential oils." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRvfTVPEkPQmijnE68iwqYVblWVH5preMS3dzgMtVPdt0lXtxbD9ylIX3JbaYwJ4X23ezMz8tkYdWKlgrHrCvyBffKoDJZuAEHf5c2GaVHPSXmGItKkofduCtS-c58Gjvx05qHlOWIk8rmOtkOHYoXmSW3dWbACSobQD0f-Mz_hFKGBcpQ3pZj0IZGIezoj5WyMHj9yqsJ0Y1kdpmUPx4Y3Oe3BzVr2f1BCrBhXaERd7Oj158_kiv-ij6q6R-o1Ydn3GO2DXj5Pd16"/>
+<div class="absolute top-3 left-3 bg-error-container text-on-error-container px-3 py-1 rounded-full text-label-sm font-label-sm">Pocas Unidades</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant bg-secondary-fixed/20 px-2 py-0.5 rounded">Aceites</span>
+<span class="text-headline-md font-headline-md text-primary">$89.00</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 line-clamp-1">Kit de Crecimiento Concentrado</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Tratamiento de precisión de 12 semanas diseñado para fortalecer la densidad y vitalidad capilar.</p>
+<div class="mt-auto flex gap-2">
+<button class="flex-grow bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:bg-primary/90 transition-colors active:scale-95">Me Interesa</button>
+<button class="material-symbols-outlined w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-primary hover:bg-surface-container-low active:scale-95 transition-all">visibility</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full border border-outline-variant/30">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tall, elegant pump bottle of premium shampoo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwR3LcqwMEudOflc5RALmGlO-vrogyZwnDUSa4sssFiMxDdGfr_JzAKLfjQuo6cW5dnz4ilOgqSYaZCmyuffrYPPqrzb_yVKeyUvPA6OKtOEKtAYcR_77i46BtU3VrjoXGKoJXB-zY8oEUoUQQ2UgjJlEf5RH5gheyfba9Y6lToO7WYgd3QwHDbOlew5DgVoEpJx6wrVdoI5pDAH-UUc5dDI2DmqAeDahJAVPf974QBxrNVNL-nQUwftXm5dK4aQjti58KT-lvElIN"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant bg-secondary-fixed/20 px-2 py-0.5 rounded">Cuidado Capilar</span>
+<span class="text-headline-md font-headline-md text-primary">$29.00</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 line-clamp-1">Champú Purificante Base</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Limpiador purificante suave que remueve las impurezas del ambiente sin deshidratar el cabello.</p>
+<div class="mt-auto flex gap-2">
+<button class="flex-grow bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:bg-primary/90 transition-colors active:scale-95">Me Interesa</button>
+<button class="material-symbols-outlined w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-primary hover:bg-surface-container-low active:scale-95 transition-all">visibility</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col h-full border border-outline-variant/30">
+<div class="relative h-64 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated white tube of conditioning cream." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy36_fnfHyt5mTeKJiooBEcDj15CxvMety-xkhf8sxa7OpI9Yv5j1ogToK9Z8KOSic0AOpk5A3RZq6YWTzX7sO06l5AQIB_NyheBm0I1UtKnddAziJSaMUCyW1HaPkYWBDMVyWpZks1q2BjiDUUONDXqAeaDIwSe7i8IKAHSKLY4PBOl4E44vvG9xLyCL7rn7nN2Bh1QL4WLrFYYli2wN69aJ2kbRZc7En0OXPJZlzurJJ-8z2QKrI3xwF9ZRvWm-g9pilL57g_vpO"/>
+<div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm">Disponible</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<span class="text-label-sm font-label-sm text-on-secondary-fixed-variant bg-secondary-fixed/20 px-2 py-0.5 rounded">Cuidado Capilar</span>
+<span class="text-headline-md font-headline-md text-primary">$32.00</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-2 line-clamp-1">Acondicionador Protector Térmico</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-2">Acondicionador barrera protectora que defiende el cabello del daño por calor y rayos UV.</p>
+<div class="mt-auto flex gap-2">
+<button class="flex-grow bg-primary text-on-primary py-3 rounded-lg text-label-lg font-label-lg hover:bg-primary/90 transition-colors active:scale-95">Me Interesa</button>
+<button class="material-symbols-outlined w-12 h-12 flex items-center justify-center border border-outline-variant rounded-lg text-primary hover:bg-surface-container-low active:scale-95 transition-all">visibility</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-12 flex flex-col items-center gap-4">
+<button class="px-8 py-3 bg-surface border border-outline text-primary rounded-lg text-label-lg font-label-lg hover:bg-surface-container-low transition-colors active:scale-95">
+                Cargar Más Productos
+            </button>
+<p class="text-label-sm font-label-sm text-outline">Mostrando 6 de 48 productos premium</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-surface border-t border-outline-variant shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-2 xs:px-3 py-1 hover:bg-surface-container-high transition-all min-w-0"
+    href="../../../index.html">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[10px] xs:text-label-sm truncate w-full text-center">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-2 xs:px-3 py-1 hover:bg-surface-container-high transition-all min-w-0"
+    href="#">
+    <span class="material-symbols-outlined">content_cut</span>
+    <span class="text-[10px] xs:text-label-sm truncate w-full text-center">Servicios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-2 xs:px-3 py-1 hover:bg-surface-container-high transition-all min-w-0"
+    href="../Citas_usuario/citas_user.html">
+    <span class="material-symbols-outlined">calendar_today</span>
+    <span class="text-[10px] xs:text-label-sm truncate w-full text-center">Citas</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-2 xs:px-3 py-1 min-w-0"
+    href="../our_products/productos.html">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+    <span class="text-[10px] xs:text-label-sm truncate w-full text-center font-bold">Productos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-2 xs:px-3 py-1 hover:bg-surface-container-high transition-all min-w-0"
+    href="../inventory_management/inventario.html">
+    <span class="material-symbols-outlined">login</span>
+    <span class="text-[10px] xs:text-label-sm truncate w-full text-center font-bold">Ingresar</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions and hover effects
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                // Subtle feedback handled by Tailwind hover classes
+            });
+        });
+
+        // Search bar activation effect
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('shadow-md');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('shadow-md');
+        });
+    </script>
+</body></html>

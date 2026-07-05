@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recordatorios | Elite Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c6c6cd",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-container-highest": "#d3e4fe",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#76777d",
+                    "secondary-fixed": "#6ffbbe",
+                    "surface-variant": "#d3e4fe",
+                    "surface-dim": "#cbdbf5",
+                    "primary-container": "#131b2e",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-surface": "#0b1c30",
+                    "surface-bright": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#2a1700",
+                    "inverse-primary": "#bec6e0",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "background": "#f8f9ff",
+                    "on-secondary-container": "#00714d",
+                    "secondary-container": "#6cf8bb",
+                    "tertiary-fixed": "#ffddb8",
+                    "on-background": "#0b1c30",
+                    "surface-container-high": "#dce9ff",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface": "#f8f9ff",
+                    "tertiary": "#000000",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-primary-fixed": "#131b2e",
+                    "secondary": "#006c49",
+                    "primary": "#000000",
+                    "primary-fixed": "#dae2fd",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary-container": "#7c839b",
+                    "inverse-surface": "#213145",
+                    "surface-tint": "#565e74",
+                    "surface-container": "#e5eeff",
+                    "on-tertiary-container": "#b87500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "margin-tablet": "32px",
+                    "gutter": "16px",
+                    "margin-mobile": "16px",
+                    "xs": "4px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "xl": "32px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .active-tab {
+            color: #000000;
+            border-bottom: 2px solid #000000;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .shadow-soft {
+            box-shadow: 0px 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen font-body-md flex flex-col">
+<!-- Top App Bar -->
+<header class="bg-surface sticky top-0 z-40 w-full px-4 h-16 flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-4 min-w-0">
+<a href="../../../index.html" class="p-2 active:scale-95 transition-transform rounded-full hover:bg-surface-container-low shrink-0" title="Volver">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</a>
+<h1 class="font-headline-md text-base sm:text-headline-md font-bold text-on-surface truncate">Elite Aesthetics</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 pb-24 max-w-5xl mx-auto w-full px-margin-mobile md:px-margin-tablet pt-6">
+<!-- Tab Navigation -->
+<div class="flex border-b border-outline-variant mb-6">
+<button class="flex-1 py-3 text-label-lg font-label-lg text-on-surface-variant active-tab transition-all" id="tab-clients" onclick="switchTab('clients')">
+                Clients
+            </button>
+<button class="flex-1 py-3 text-label-lg font-label-lg text-on-surface-variant transition-all" id="tab-admin" onclick="switchTab('admin')">
+                Admin
+            </button>
+</div>
+<!-- Pestaña Clients: Automation List -->
+<section class="tab-content active space-y-4" id="content-clients">
+<div class="flex justify-between items-center mb-2">
+<h2 class="font-headline-md text-headline-md">Automated Messaging</h2>
+<button class="text-secondary font-label-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filter
+                </button>
+</div>
+<!-- Client Reminder Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Reminder Item 1 -->
+<div class="bg-surface shadow-soft border border-outline-variant rounded-xl p-md flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">Alex Rivera</p>
+<p class="text-label-sm text-on-surface-variant">App Notification</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-secondary-container/20 text-on-secondary-container text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                            Sent
+                        </span>
+</div>
+<p class="text-body-md text-on-surface-variant italic">"Hi Alex, your appointment for Digital Audit is tomorrow at 10 AM."</p>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant">
+<span class="text-label-sm text-outline">Today, 09:00 AM</span>
+<button class="text-primary font-label-lg">View Details</button>
+</div>
+</div>
+<!-- Reminder Item 2 -->
+<div class="bg-surface shadow-soft border border-outline-variant rounded-xl p-md flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed">sms</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">Beatriz Moreno</p>
+<p class="text-label-sm text-on-surface-variant">SMS Reminder</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-tertiary-fixed/30 text-on-tertiary-container text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                            Scheduled
+                        </span>
+</div>
+<p class="text-body-md text-on-surface-variant italic">"Reminder: Invoice #8920 is due in 2 days. Click to pay."</p>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant">
+<span class="text-label-sm text-outline">Oct 24, 02:00 PM</span>
+<button class="text-primary font-label-lg">Edit</button>
+</div>
+</div>
+<!-- Reminder Item 3 -->
+<div class="bg-surface shadow-soft border border-outline-variant rounded-xl p-md flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<p class="font-label-lg text-on-surface">Carlos G.</p>
+<p class="text-label-sm text-on-surface-variant">App Notification</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-secondary-container/20 text-on-secondary-container text-label-sm rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                            Sent
+                        </span>
+</div>
+<p class="text-body-md text-on-surface-variant italic">"Your order has been shipped and is arriving today!"</p>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant">
+<span class="text-label-sm text-outline">Yesterday, 04:30 PM</span>
+<button class="text-primary font-label-lg">View Details</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pestaña Admin: Stock & Key Dates -->
+<section class="tab-content space-y-6" id="content-admin">
+<!-- Stock Alerts Section -->
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-error">inventory_2</span>
+                    Key Product Stock Alerts
+                </h3>
+<div class="space-y-3">
+<div class="bg-surface shadow-soft rounded-xl p-md border-l-4 border-error flex items-center justify-between">
+<div class="flex flex-col">
+<p class="font-label-lg text-on-surface">Ultra-Processor Gen 9</p>
+<p class="text-label-sm text-error font-semibold">Critical: 2 units left</p>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-lg active:scale-95 transition-transform">
+                            Reorder
+                        </button>
+</div>
+<div class="bg-surface shadow-soft rounded-xl p-md border-l-4 border-on-tertiary-container flex items-center justify-between">
+<div class="flex flex-col">
+<p class="font-label-lg text-on-surface">Fiber Optic Cable (50m)</p>
+<p class="text-label-sm text-on-tertiary-container font-semibold">Low: 15 units left</p>
+</div>
+<button class="border border-outline text-primary px-4 py-2 rounded-lg font-label-lg active:scale-95 transition-transform">
+                            Stock Details
+                        </button>
+</div>
+</div>
+</div>
+<!-- Key Dates Bento Grid -->
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event_note</span>
+                    Key Calendar Dates
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-6 border border-outline-variant flex flex-col justify-between min-h-[200px]">
+<div>
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full text-label-sm">Next Week</span>
+<h4 class="font-display-lg text-display-lg mt-4 text-primary">Quarterly Tax Filing</h4>
+<p class="text-body-lg text-on-surface-variant mt-2">Final submission for Q3 logistics and payroll taxes. Required documentation due by Friday.</p>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-lg mt-4">
+<span class="material-symbols-outlined">calendar_month</span>
+                            October 31, 2023
+                        </div>
+</div>
+<div class="bg-secondary-container/40 rounded-xl p-6 flex flex-col justify-center items-center text-center">
+<div class="w-16 h-16 bg-on-secondary-container/10 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">cake</span>
+</div>
+<h4 class="font-headline-md text-on-secondary-container">Store Anniversary</h4>
+<p class="text-label-sm text-on-secondary-fixed-variant mt-2">5 years of operation</p>
+<p class="text-label-lg font-bold text-on-secondary-container mt-1">Nov 12</p>
+</div>
+<div class="bg-surface shadow-soft rounded-xl p-6 border border-outline-variant flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-label-lg">License Renewal</span>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-display-lg font-display-lg">14</span>
+<span class="text-label-sm text-outline mb-1">Days Left</span>
+</div>
+<div class="w-full bg-outline-variant h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-1 pb-safe bg-surface border-t border-outline-variant shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="#">
+    <span class="material-symbols-outlined">dashboard</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../inventory_management/inventario.html">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center ">Inventario</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../Citas_admin/code.html">
+    <span class="material-symbols-outlined">calendar_today</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Citas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../sales/code.html">
+    <span class="material-symbols-outlined">payments</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Ventas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0"
+    href="../sales_history/code.html">
+    <span class="material-symbols-outlined">history</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Historial</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-1 xs:px-2 py-1 min-w-0" href="../reminders_alerts/code.html">
+    <span class="material-symbols-outlined">notifications</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center font-bold">Notificaciones</span>
+</a>
+</nav>
+<script>
+        function switchTab(tab) {
+            const clientsBtn = document.getElementById('tab-clients');
+            const adminBtn = document.getElementById('tab-admin');
+            const clientsContent = document.getElementById('content-clients');
+            const adminContent = document.getElementById('content-admin');
+
+            if (tab === 'clients') {
+                clientsBtn.classList.add('active-tab');
+                clientsBtn.classList.remove('text-on-surface-variant');
+                adminBtn.classList.remove('active-tab');
+                adminBtn.classList.add('text-on-surface-variant');
+                
+                clientsContent.classList.add('active');
+                adminContent.classList.remove('active');
+            } else {
+                adminBtn.classList.add('active-tab');
+                adminBtn.classList.remove('text-on-surface-variant');
+                clientsBtn.classList.remove('active-tab');
+                clientsBtn.classList.add('text-on-surface-variant');
+
+                adminContent.classList.add('active');
+                clientsContent.classList.remove('active');
+            }
+        }
+    </script>
+</body></html>

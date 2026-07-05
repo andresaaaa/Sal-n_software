@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Historial de Ventas | Elite Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .transaction-card:active {
+            transform: scale(0.98);
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#c6c6cd",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-container-highest": "#d3e4fe",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#2a1700",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#76777d",
+                      "secondary-fixed": "#6ffbbe",
+                      "surface-variant": "#d3e4fe",
+                      "surface-dim": "#cbdbf5",
+                      "primary-container": "#131b2e",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#45464d",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#bec6e0",
+                      "inverse-on-surface": "#eaf1ff",
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-surface": "#0b1c30",
+                      "surface-bright": "#f8f9ff",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#2a1700",
+                      "inverse-primary": "#bec6e0",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#eff4ff",
+                      "background": "#f8f9ff",
+                      "on-secondary-container": "#00714d",
+                      "secondary-container": "#6cf8bb",
+                      "tertiary-fixed": "#ffddb8",
+                      "on-background": "#0b1c30",
+                      "surface-container-high": "#dce9ff",
+                      "on-tertiary-fixed-variant": "#653e00",
+                      "surface": "#f8f9ff",
+                      "tertiary": "#000000",
+                      "tertiary-fixed-dim": "#ffb95f",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-primary-fixed": "#131b2e",
+                      "secondary": "#006c49",
+                      "primary": "#000000",
+                      "primary-fixed": "#dae2fd",
+                      "on-secondary-fixed": "#002113",
+                      "on-primary-container": "#7c839b",
+                      "inverse-surface": "#213145",
+                      "surface-tint": "#565e74",
+                      "surface-container": "#e5eeff",
+                      "on-tertiary-container": "#b87500"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "margin-tablet": "32px",
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "xl": "32px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "label-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top AppBar -->
+<header class="bg-surface sticky top-0 z-50 flex justify-between items-center w-full px-4 h-16 shadow-sm glass-header">
+<div class="flex items-center gap-4 min-w-0">
+<a href="../../../index.html" class="material-symbols-outlined text-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95 duration-150 shrink-0" title="Volver">arrow_back</a>
+<h1 class="text-base sm:text-headline-md font-headline-md font-bold text-on-surface truncate">Elite Aesthetics</h1>
+</div>
+<div class="flex items-center">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-low transition-colors p-2 rounded-full active:scale-95 duration-150">notifications</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-mobile md:p-margin-tablet lg:max-w-6xl lg:mx-auto w-full space-y-lg pb-32">
+<!-- Search and Filter Bar -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-lowest border border-outline rounded-xl focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-all font-body-md text-on-surface" placeholder="Search Transaction ID or Client Name..." type="text"/>
+</div>
+<div class="md:col-span-4 flex gap-2">
+<button class="flex-1 h-12 flex items-center justify-center gap-2 border border-outline rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors text-label-lg font-label-lg text-on-surface">
+<span class="material-symbols-outlined">calendar_month</span>
+                    Date Filter
+                </button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</section>
+<!-- Transaction List -->
+<section class="space-y-4">
+<div class="flex justify-between items-center px-2">
+<h2 class="text-label-lg font-label-lg text-on-surface-variant">RECENT TRANSACTIONS</h2>
+<span class="text-label-sm font-label-sm text-outline">Showing 24 entries</span>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Transaction Entry 1: Paid -->
+<div class="transaction-card bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-all cursor-pointer group" onclick="toggleDetails('details-1')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-on-surface">#TR-88219</p>
+<p class="text-body-md text-on-surface-variant">Eleanor Pena</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-label-lg font-label-lg text-on-surface">Amount $120.00</p>
+<span class="inline-flex items-center rounded-full bg-secondary-container/20 px-3 py-1 text-label-sm font-label-sm text-on-secondary-container">
+                                Paid
+                            </span>
+</div>
+</div>
+<!-- Hidden Breakdown -->
+<div class="hidden mt-4 pt-4 border-t border-outline-variant space-y-2 animate-in fade-in slide-in-from-top-1" id="details-1">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Date:</span>
+<span class="text-on-surface font-medium">Oct 12, 2023 • 14:45</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Product Breakdown:</span>
+<span class="text-on-surface font-medium">Premium Suite x1, Onboarding x1</span>
+</div>
+</div>
+</div>
+<!-- Transaction Entry 2: Pending -->
+<div class="transaction-card bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-all cursor-pointer group" onclick="toggleDetails('details-2')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-on-surface">#TR-88220</p>
+<p class="text-body-md text-on-surface-variant">Guy Hawkins</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-label-lg font-label-lg text-on-surface">Amount $120.00</p>
+<span class="inline-flex items-center rounded-full bg-on-tertiary-container/10 px-3 py-1 text-label-sm font-label-sm text-on-tertiary-container">
+                                Pending
+                            </span>
+</div>
+</div>
+<div class="hidden mt-4 pt-4 border-t border-outline-variant space-y-2" id="details-2">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Date:</span>
+<span class="text-on-surface font-medium">Oct 12, 2023 • 15:10</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Product Breakdown:</span>
+<span class="text-on-surface font-medium">Cloud Storage (50GB) x3</span>
+</div>
+</div>
+</div>
+<!-- Transaction Entry 3: Incomplete -->
+<div class="transaction-card bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-all cursor-pointer group" onclick="toggleDetails('details-3')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined">error_outline</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-on-surface">#TR-88221</p>
+<p class="text-body-md text-on-surface-variant">Marvin McKinney</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-label-lg font-label-lg text-on-surface">Amount $120.00</p>
+<span class="inline-flex items-center rounded-full bg-error-container/40 px-3 py-1 text-label-sm font-label-sm text-error">
+                                Incomplete
+                            </span>
+</div>
+</div>
+<div class="hidden mt-4 pt-4 border-t border-outline-variant space-y-2" id="details-3">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Date:</span>
+<span class="text-on-surface font-medium">Oct 12, 2023 • 16:22</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Product Breakdown:</span>
+<span class="text-on-surface font-medium">Enterprise License x1 (Payment Failed)</span>
+</div>
+</div>
+</div>
+<!-- Repeat Entry for Visual Density -->
+<div class="transaction-card bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant hover:border-primary transition-all cursor-pointer group" onclick="toggleDetails('details-4')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-label-lg font-label-lg text-on-surface">#TR-88222</p>
+<p class="text-body-md text-on-surface-variant">Theresa Webb</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-label-lg font-label-lg text-on-surface">Amount $120.00</p>
+<span class="inline-flex items-center rounded-full bg-secondary-container/20 px-3 py-1 text-label-sm font-label-sm text-on-secondary-container">
+                                Paid
+                            </span>
+</div>
+</div>
+<div class="hidden mt-4 pt-4 border-t border-outline-variant space-y-2" id="details-4">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Date:</span>
+<span class="text-on-surface font-medium">Oct 11, 2023 • 09:12</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Product Breakdown:</span>
+<span class="text-on-surface font-medium">API Access Key x1</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Insights Bento Section (Extra professional flair) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-primary-container text-white p-md rounded-xl flex flex-col justify-between">
+<span class="text-label-sm font-label-sm opacity-70">TOTAL REVENUE (24h)</span>
+<p class="text-display-lg font-display-lg">$2,880</p>
+<div class="flex items-center gap-1 text-on-secondary-container text-label-sm mt-2">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>12% from yesterday</span>
+</div>
+</div>
+<div class="bg-surface-container text-on-surface p-md rounded-xl flex flex-col justify-between border border-outline-variant">
+<span class="text-label-sm font-label-sm text-on-surface-variant">SUCCESS RATE</span>
+<p class="text-display-lg font-display-lg">94.2%</p>
+<div class="w-full bg-outline-variant h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 94.2%"></div>
+</div>
+</div>
+<div class="bg-surface-container text-on-surface p-md rounded-xl flex items-center gap-4 border border-outline-variant">
+<div class="flex-grow">
+<span class="text-label-sm font-label-sm text-on-surface-variant">CLIENT ACQUISITION</span>
+<p class="text-headline-md font-headline-md">+14 New</p>
+</div>
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" data-alt="A sophisticated business data visualization chart with glowing lines and points on a clean, professional dark background that represents growth and modern technology." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCC3MP784A582wHTsaf4dScJjwtZTdFUTCB1EztzNmJhOyn8j9j4eeJLnFieOpM4T32IpHIaqCuBW5v2D_oyxF9yglMvI-3bGN5rU77ZjD9ugoB7B8CBoia9JhoMm1FBOA5-DPR8gAF71ZDTAwRg3SeGJrEdq1-OtgP3Up-RL_TufzilhfXI7iJVsyHQ12ukPyD5FUuejLHoPjkMU4M3X8C6MZhIJVgtIceuFQEWQ9277TwME3Kn1U0ZQIfucUK8yfjfQGt0EW4GCi7')"></div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (from JSON) -->
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-1 pb-safe bg-surface border-t border-outline-variant shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="#">
+    <span class="material-symbols-outlined">dashboard</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../inventory_management/inventario.html">
+    <span class="material-symbols-outlined">inventory_2</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Inventario</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../Citas_admin/code.html">
+    <span class="material-symbols-outlined">calendar_today</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Citas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../sales/code.html">
+    <span class="material-symbols-outlined">payments</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center">Ventas</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-1 xs:px-2 py-1 min-w-0"
+    href="../sales_history/code.html">
+    <span class="material-symbols-outlined">history</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center font-bold">Historial</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-1 xs:px-2 py-1 hover:bg-surface-container-high rounded-full transition-all active:scale-90 min-w-0" href="../reminders_alerts/code.html">
+    <span class="material-symbols-outlined">notifications</span>
+    <span class="text-[10px] xs:text-11px truncate w-full text-center font-bold">Notificaciones</span>
+</a>
+</nav>
+<script>
+        function toggleDetails(id) {
+            const detailEl = document.getElementById(id);
+            const allDetails = document.querySelectorAll('[id^="details-"]');
+            
+            // Close others
+            allDetails.forEach(el => {
+                if (el.id !== id) el.classList.add('hidden');
+            });
+            
+            // Toggle current
+            detailEl.classList.toggle('hidden');
+        }
+    </script>
+</body></html>
